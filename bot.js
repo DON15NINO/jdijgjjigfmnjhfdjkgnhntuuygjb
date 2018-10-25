@@ -684,3 +684,10 @@ client.on('typingStart', (ch, user) => {
         })
     }
 });
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`:hearts:منور السيرفر:hearts:
+:crown:اسمك:crown: : ${member}  
+أنت العضو رقم: : ${member.guild.memberCount} `) 
+}).catch(console.error)
+})
