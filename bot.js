@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.on('ready', () => {
-  client.user.setGame('💕 صلي علي النبي 💕','https://www.twitch.tv/TEST-Broadcast');
+  client.user.setGame('💕 ابديت 💕','https://www.twitch.tv/TEST-Broadcast');
   console.log('---------------');
   console.log(' Bot Is Online')
   console.log('---------------')
@@ -110,7 +110,7 @@ const prefix = "^";
   .addField("User:",  `[ + ${user.tag} + ]`)
   .addField("By:", `[  + ${message.author.tag} +  ]`)
   .addField("Reason:", `[ + ${reason} +  ]`)
-  client.channels.get("503298179320512512").send({embed : banembed})
+  client.channels.get("504949765239341056").send({embed : banembed})
 }
 });
 client.on("message", message => {
@@ -245,54 +245,8 @@ client.on('ready', () => {
 
             }
 });
-client.on("message", message => {
-    var prefix = "*";
- if (message.content === "^help") {
-     message.channel.send('**:envelope: | تم ارسال الرساله في الخاص :thumbsup:**');
-  const embed = new Discord.RichEmbed()
-      .setDescription(`
-**╔[❖════════════════════════════❖]╗**
-**──▄────▄▄▄▄▄▄▄────▄───
-─▀▀▄─▄█████████▄─▄▀▀──
-─────██─▀███▀─██──────
-───▄─▀████▀████▀─▄────
-─▀█────██▀█▀██────█▀──**
-** ^hostserver ~ دعوه لسيرفر الخادم المسوي البوب**
-** ^inv ~ لدعوة البوت ل سيرفرك**
-     [❖═══════ اوامر اداريه ═══════❖]
-**╚:crown:❖^unmute= لفك الميوت الكتابي**
-** ╚:crown:❖^mute= لعمل ميوت كتابي لحد**
-** ╚:crown:❖^bc = يرسل رسالة للكل**
-** ╚:crown:❖^ban= لتبنيد احد من السيرفر**
-** ╚:crown:❖^owner= لمعرفت مبرمج البوت**
-**╚:crown:❖^kick = لطرد عضو مع السبب**
-** ╚:crown:❖^avatar= صورتك أو صورة الي تمنشنه**
-** ╚:crown:❖^ping= لمعرفة سرعة استجابة البوت في الوقت الحالي**
-** ╚:crown:❖^warn= warns لتشغيل سوي روم باسم**
-**اكتب اسم اي بلد يطلع لك علمها :wink:  **
-**:no_entry:البوت تحت التطوير:no_entry:**
-`)
-   message.author.sendEmbed(embed)
-   
-   }
-   });
-   client.on('message' , message => {
+var prefix = "^";
  
-    if (message.content === "^hostserver") {
-        message.reply(`تم ارساله الرابط في الخاص`)
-        if(!message.channel.guild) return message.reply('**الآمر فقط في السيرفرات**');
-     const embed = new Discord.RichEmbed()
- .setColor("RANDOM")
- .setThumbnail(client.user.avatarURL)    
- .setDescription("سيرفر الخادم" + `
- **
-سيرفر الخادم المعمول عليه البوت |
-https://discord.gg/YetVzP
- **
-`);
-  message.author.sendEmbed(embed);
-   }
-});
 client.on('message', message => {  
 if (message.author.boss) return;
 var prefix = "^";
@@ -689,24 +643,3 @@ client.on("guildMemberAdd", member => {
 أنت العضو رقم: : ${member.guild.memberCount} `) 
 }).catch(console.error)
 })
-client.on('message' , async (message) => {
-       if(message.content.startsWith(`<@${client.user.id}>`)) {
-              message.channel.startTyping()
- let responses = [
-        'تحتاج مساعدة جرب help^',
-        'هلا امرني',
-        'تحبني؟',
-         'طفشان عندك نكتة؟',
-         'تمنشن بوت؟',
-         'اعجبك البوت',
-         'لا تنسى تزور سيرفر السبورت',
-       'احبك ياخي'
-    ]
-    
-    // Fetch a random item from the array
-    let fetched = responses[Math.floor(Math.random() * responses.length)];
-   message.reply(fetched)
-   message.channel.stopTyping()
-       }
-  
-});
