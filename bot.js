@@ -271,8 +271,6 @@ client.on("message", message => {
 ** ╚:crown:❖^avatar= صورتك أو صورة الي تمنشنه**
 ** ╚:crown:❖^ping= لمعرفة سرعة استجابة البوت في الوقت الحالي**
 ** ╚:crown:❖^warn= warns لتشغيل سوي روم باسم**
-** ╚:crown:❖^mutechannel=لقفل الروم**
-** ╚:crown:❖^unmutechannel=لفتح روم**
 **اكتب اسم اي بلد يطلع لك علمها :wink:  **
 **:no_entry:البوت تحت التطوير:no_entry:**
 `)
