@@ -245,8 +245,6 @@ client.on('ready', () => {
 
             }
 });
-var prefix = "^";
-
 client.on("message", message => {
     var prefix = "*";
  if (message.content === "^help") {
@@ -289,7 +287,7 @@ client.on("message", message => {
  .setDescription("سيرفر الخادم" + `
  **
 سيرفر الخادم المعمول عليه البوت |
-https://discord.gg/8snBhX
+https://discord.gg/YetVzP
  **
 `);
   message.author.sendEmbed(embed);
