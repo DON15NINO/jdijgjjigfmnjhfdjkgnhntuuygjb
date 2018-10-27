@@ -424,17 +424,7 @@ client.on('message', message => {
       message.channel.sendEmbed(embed);
     }
 });
-client.on("guildMemberAdd", function(member) {
-  const channel = member.guild.channels.find("name", "welcome")
-      const embed = new Discord.RichEmbed()
-      .setColor('RANDOM')
-      .setAuthor(member.user.tag, member.user.avatarURL)
-.setDescription('*** :heart:  ولكم نورت السيرفر يا قلبي نتمني لك الاستمتاع في السيرفر***')
-.setThumbnail(member.avatarURL)
-.setImage('https://cdn.discordapp.com/attachments/503693641878077475/504221403017510912/download.jpg')
-      if (!channel) return;
-      channel.sendEmbed(embed);
-});
+
 client.on("message", (message) => {
     if (message.content.startsWith("^ban ")) {
       if(!message.member.hasPermission('BAN_MEMBERS')) return message.reply('⚠ ماعندك الصلاحيات');
@@ -473,17 +463,7 @@ client.on('message',message =>{
    
     }
   });
-  client.on("guildMemberAdd", function(member) {
-  const channel = member.guild.channels.find("name", "📩c̈̈н̈̈ɐʇ_شــآتــ✉")
-      const embed = new Discord.RichEmbed()
-      .setColor('RANDOM')
-      .setAuthor(member.user.tag, member.user.avatarURL)
-.setDescription('*** :heart:  ولكم نورت السيرفر يا قلبي نتمني لك الاستمتاع في السيرفر***')
-.setThumbnail(member.avatarURL)
-.setImage('https://cdn.discordapp.com/attachments/503693641878077475/504221403017510912/download.jpg')
-      if (!channel) return;
-      channel.sendEmbed(embed);
-});
+
  client.on('message', msg => {
     if (msg.content.startsWith(`^warn`)) {
        let args = msg.content.split(" ").slice(1);
@@ -500,23 +480,7 @@ client.on('message',message =>{
       }
     }
 })
-client.on('guildMemberRemove', Sal => { //By Salto7#4595
-  var embed = new Discord.RichEmbed()
-  .setAuthor(Sal.user.username, Sal.user.avatarURL)
-  .setThumbnail(Sal.user.avatarURL)
-  .setImage('https://previews.123rf.com/images/dxinerz/dxinerz1509/dxinerz150901337/45612790-bye-goodbye-icon.jpg') //هنا حط الصوره الي تبيها
-  .setTitle('خرج عضو')
-  .setDescription('الله معك مع السلامه')
-  .addField('``ايدي العضو``:',"" +  Sal.user.id, true)
-  .addField('``تاق العضو``', Sal.user.discriminator, true)
-  .addField('``تم الانشاء في``', Sal.user.createdAt, true)
-  .addField(' 👤 الان ',`**[ ${Sal.guild.memberCount} ]**`,true)
-  .setColor('RED')
-  .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-  var channel =Sal.guild.channels.find('name', 'welcome') // هنا حط اسم الروم الي تبيه يكتب فيه
-  if (!channel) return;
-  channel.send({embed : embed});
-  });
+
 client.on('message',async msg => {//Alpha Codes
 //Alpha Codes//Alpha Codes//Alpha Codes//Alpha Codes//Alpha Codes
   var prefix = "^";//Alpha Codes
@@ -540,7 +504,7 @@ Dat = currentTime.getDate()//Alpha Codes
   }
  
 });
-const adminprefix = "$";
+const adminprefix = "^";
 const devs = ['430860058591756289','480184422386237451'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
@@ -593,13 +557,7 @@ client.on('typingStart', (ch, user) => {
         })
     }
 });
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(`:hearts:منور السيرفر:hearts:
-:crown:اسمك:crown: : ${member}  
-أنت العضو رقم: : ${member.guild.memberCount} `) 
-}).catch(console.error)
-})
+
 client.on('message' , async (message) => {
        if(message.content.startsWith(`<@${client.user.id}>`)) {
               message.channel.startTyping()
