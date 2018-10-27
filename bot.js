@@ -8,33 +8,6 @@ client.on('ready', () => {
 });
 
 client.login('NTA0OTI2ODg4OTI2MzgwMDMy.DrMKQw.oKN9qJvCfV1wHo9e3DrsmS8YrGI');
-	client.on('message' , message => {
-if (message.content === '^owner') {
-         let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)    
-      .addField("**تم تطوير وبرمجه البوت من قبل 🔧 **","**๖̶̶̶ζ͜͡¤💕7м̃̾ŏŏ_ấĺẻấĺấм̃̾ĩŭ👑\ #5526**")
-.setColor('#B101FC')
-  message.author.sendEmbed(embed);
-    }
-});
-    client.on('message', message => {
-     if (message.content === "^id") {
-     let embed = new Discord.RichEmbed()
-  .setThumbnail(message.author.avatarURL)  
-  .setAuthor(message.author.username)
-.setDescription("معلومات عن الحــساب")
-               .setFooter(`BLAST CODE 👑`, '')
-  .setColor("#9B59B6")
-  .addField("اســـم الحســاب", `${message.author.username}`)
-  .addField('كود الحساب الخاص', message.author.discriminator)
-  .addField("الرقـــم الشـــخصي", message.author.id)
-  .addField('بــــوت', message.author.bot)
-  .addField("تاريخ التسجيل", message.author.createdAt)
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
 	client.on('message', message => {
 const prefix = "^";
   if (message.author.kick) return;
@@ -67,9 +40,10 @@ const prefix = "^";
   .addField("User:",  `[ + ${user.tag} + ]`)
   .addField("By:", `[  + ${message.author.tag} +  ]`)
   .addField("Reason:", `[ + ${reason} +  ]`)
-  client.channels.get("504949765239341056").send({embed : banembed})
+  client.channels.get("505491020536872965").send({embed : banembed})
 }
 });
+
 client.on("message", message => {
     var prefix = "^";
  
@@ -92,6 +66,7 @@ client.on("message", message => {
 
      
 });
+
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -169,39 +144,7 @@ client.on('ready', () => {
 
             }
 });
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-         client.on('message', message => {
-            if (message.content === 'نوب') {
-              message.channel.send('**شبهك :innocent::joy:**');
-              message.channel.sendFile("./photoshop.PNG");
-               
 
-            }
-})
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-         client.on('message', message => {
-            if (message.content === '^owner') {
-              message.channel.send('**:envelope: | تم ارسال الرساله في الخاص :thumbsup:**');
-              message.channel.sendFile("./photoshop.PNG");
-               
-
-            }
-});
-  client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-         client.on('message', message => {
-            if (message.content === '^inv') {
-              message.channel.send('**الربط : :heart:https://discordapp.com/api/oauth2/authorize?client_id=503355472791863306&permissions=0&scope=bot :heart: **');
-              message.channel.sendFile("./photoshop.PNG");
-               
-
-            }
-});
 var prefix = "^";
  
 client.on('message', message => {  
@@ -271,53 +214,7 @@ var unmuteembeddm = new Discord.RichEmbed()
   user.send( unmuteembeddm);
 }
 });
-client.on("message", message => {
-      if (message.content === "^ping") {
-      const embed = new Discord.RichEmbed()
-  .setColor("RANDOM")
-  .addField('**Ping:**' , `${Date.now() - message.createdTimestamp}` + ' ms')
-  message.channel.sendEmbed(embed);
-    }
-});
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('discord.gg')){
-      if(!message.member.hasPermission('ADMINISTRATOR'))
-        message.delete()
-    return message.reply(`** No Invite Links :angry: ! **`)
-    }
-});
-client.on('message', message => {
-    if (message.content.startsWith("^haker")) {
-      if (message.author.bot) return
-           message.delete();
-             let args = message.content.split(' ').slice(1);
-                   let virusname = args.join(' ');
-                 if (virusname < 1) {
-                     return message.channel.send("``اكتب اسم الشخص الي تبي يتهكر``");
-                                     }
-                 message.channel.send({embed: new Discord.RichEmbed().setTitle('Loading ' + virusname + "...").setColor(0xFF0000)}).then(function(m) {
-             setTimeout(function() {
-               m.edit({embed: new Discord.RichEmbed().setTitle('[' + virusname + ']: Loading Discord Virus [▓ ] 1%').setColor(0xFF0000)})
-             }, 1000)
-            setTimeout(function() {
-               m.edit({embed: new Discord.RichEmbed().setTitle('[' + virusname + ']: Loading Discord Virus [▓▓▓▓] 25%').setColor(0xFF0000)})
-             }, 2000)
-           setTimeout(function() {     
-               m.edit({embed: new Discord.RichEmbed().setTitle('[' + virusname + ']: Loading Discord Virus [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ] 100%').setColor(0xFF0000)})
-             }, 3000)
-                setTimeout(function() {
-               m.edit({embed: new Discord.RichEmbed().setTitle('[' + virusname + ']: Uploaded! Initiating explosion in 1...').setColor(0xFF0000)})
-             }, 4000)
-              setTimeout(function() {
-               m.delete()
-           }, 5000)
-             setTimeout(function() {
-               message.channel.send('تم تهكيرك')
-           }, 6000)
-           });
-         }
- });
+
  client.on('message', msg => {
   if (msg.content === 'السعودية') {      
     msg.react("🇸🇦")
@@ -408,20 +305,13 @@ client.on('message', msg => {
     msg.channel.send("🇲🇷")
   }
 });
-client.on('message', message => {
-    if (message.content.startsWith("^avatar")) {
-        var mentionned = message.mentions.users.first();
-    var x5bzm;
-      if(mentionned){
-          var x5bzm = mentionned;
-      } else {
-          var x5bzm = message.author;
-          
-      }
-        const embed = new Discord.RichEmbed()
-        .setColor("RANDOM")
-        .setImage(`${x5bzm.avatarURL}`)
-      message.channel.sendEmbed(embed);
+
+client.on("message", message => {
+      if (message.content === "^ping") {
+      const embed = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .addField('**Ping:**' , `${Date.now() - message.createdTimestamp}` + ' ms')
+  message.channel.sendEmbed(embed);
     }
 });
 
@@ -436,33 +326,6 @@ client.on("message", (message) => {
         });
     }
 });
-client.on('message',message =>{
-    var prefix = "^";
-    if(message.content.startsWith(prefix + 'top')) {
-  message.guild.fetchInvites().then(i =>{
-  var invites = [];
-   
-  i.forEach(inv =>{
-    var [invs,i]=[{},null];
-     
-    if(inv.maxUses){
-        invs[inv.code] =+ inv.uses+"/"+inv.maxUses;
-    }else{
-        invs[inv.code] =+ inv.uses;
-    }
-        invites.push(`invite: ${inv.url} inviter: ${inv.inviter} \`${invs[inv.code]}\`;`);
-   
-  });
-  var embed = new Discord.RichEmbed()
-  .setColor("#000000")
-  .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
-  .setThumbnail("https://media.discordapp.net/attachments/477570106755383307/479229377037598720/22713057_151850495552450_709700562_o.jpg?width=201&height=201")
-           message.channel.send({ embed: embed });
-   
-  });
-   
-    }
-  });
 
  client.on('message', msg => {
     if (msg.content.startsWith(`^warn`)) {
@@ -504,7 +367,8 @@ Dat = currentTime.getDate()//Alpha Codes
   }
  
 });
-const adminprefix = "^";
+
+const adminprefix = "!";
 const devs = ['430860058591756289','480184422386237451'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
@@ -549,6 +413,7 @@ client.on('message', function(message) {
     }
     }
 })
+
 client.on('typingStart', (ch, user) => {
     if(user.presence.status === 'offline') {
         ch.send(`${user} تحذير هذا شخص مسوي نفسه اوف لاين ويكتب`)
@@ -579,3 +444,4 @@ client.on('message' , async (message) => {
        }
   
 });
+
