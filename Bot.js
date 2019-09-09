@@ -7,7 +7,7 @@ client.on('ready', () => {
   console.log('---------------')
 });
 
-client.login('TOKEN_BOT'); 
+client.login('BOT_TOKEN'); 
 const adminprefix = "$";
 const devs = ['534808591731785779','480184422386237451'];
 client.on('message', message => {
