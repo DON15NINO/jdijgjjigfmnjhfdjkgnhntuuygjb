@@ -1,9 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setGame('💕 بسم اللة الرحمن الرحيم 💕','https://www.twitch.tv/TEST-Broadcast');
+  console.log('---------------');
+  console.log(' Bot Is Online')
+  console.log('---------------')
 });
-
 
 const adminprefix = "M";
 const devs = ['534808591731785779','516576049778130954'];
@@ -29,5 +31,9 @@ if (message.content.startsWith(adminprefix + 'setT')) {
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
 }
 });
+
+
+
+
 
 client.login(process.env.BOT_TOKEN);
